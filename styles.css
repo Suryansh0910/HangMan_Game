@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif ;
+}
+
+body{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+.conaintr{
+    width: 850px;
+    background-color: aliceblue;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 30px;
+}
+.box img{
+    max-width: 270px;
+}
+.box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.word_display {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.word_display .letters{
+    width: 28px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+}
+.word_display .letters.gussed{
+    border-color: transparent;
+    margin: -40px 0px 35px;
+}
+.main_game h3{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}   
+.main_game h3 b {
+    font-weight: 600;
+
+}
+.main_game .guess b{
+    color: brown;
+}
+.main_game .keyboard{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+:where(.pop_up_end, .keyboard) button {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+    outline: none;
+}
+.keyboard button{
+    padding: 7px;
+    width: calc(100%/9 - 5px);
+}
+.keyboard button:hover{
+    background-color: aquamarine;
+}
+.keyboard button[disabled]{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.pop_up_end{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.4s ease;
+}
+.pop_up_end.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.pop_up_end .content{
+    background-color: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.pop_up_end img{
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+.pop_up_end h3{
+    font-size: 1.53rem;
+}
+.pop_up_end p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.pop_up_end p b {
+    color: brown;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.pop_up_end button {
+    padding: 12px 23px;
+
+
+}
